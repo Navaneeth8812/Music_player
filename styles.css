@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Press Start 2P", cursive;
+    color: white;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #090979, #e91e23);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* Title */
+h2 {
+    font-size: 22px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 0px #000;
+}
+
+/* Music list */
+.list {
+    width: 100%;
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Music card */
+.music {
+    padding: 25px;
+    border: 3px solid white;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.25);
+    box-shadow: 6px 6px 0px black;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    transition: 0.2s;
+}
+
+.music:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 9px 9px 0px black;
+}
+
+/* Song title */
+.music h3 {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Buttons */
+.music button {
+    border: 3px solid white;
+    background: black;
+    padding: 12px;
+    cursor: pointer;
+    font-family: "Press Start 2P", cursive;
+    font-size: 10px;
+    transition: 0.2s;
+}
+
+.music button:hover {
+    background: white;
+    color: black;
+    transform: scale(1.05);
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+
+    body {
+        padding: 30px 15px;
+    }
+
+    h2 {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .list {
+        grid-template-columns: 1fr;
+    }
+
+    .music {
+        padding: 20px;
+    }
+}
